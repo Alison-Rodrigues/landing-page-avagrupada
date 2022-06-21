@@ -31,7 +31,7 @@ body {
     width: 50px;
     height: 50px;
 }
-.header nav a {
+.header .nav-bar a {
     text-decoration: none;
     color: #ECEEFF;
     margin: 0 20px;
@@ -41,9 +41,57 @@ body {
     transition: .2s;
     text-transform: uppercase;
 }
-.header nav a:hover {
+.header .nav-bar a:hover {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     background-color: #0050B7;
+}
+.hamburger{
+    background:none;
+    position:relative;
+    padding:5px 15px 0px 15px;
+    color: #00218C;
+    border:0;
+    font-size: 30px;
+    font-weight:bold;
+    cursor:pointer;
+    outline:none;
+    z-index:10000000000000;
+    display: none;
+}
+.cross{
+    background:none;
+    position:relative;
+    padding:7px 15px 0px 15px;
+    color: #00218C;
+    border:0;
+    font-size: 50px;
+    font-weight:bold;
+    cursor:pointer;
+    outline:none;
+    z-index:10000000000000;
+    
+}
+.menu-mobile {
+    z-index:1000000; 
+    font-weight:bold; 
+    font-size:0.8em; 
+    width:100%; 
+    background: none;  
+    position:fixed;
+    top: 80px; 
+    text-align:center;
+    font-size:12px;
+}
+.menu-mobile a {
+    margin: 0; 
+    padding: 0; 
+    display: block;   
+    padding:15px 0 15px 0; 
+    border-bottom: #ECEEFF 1px solid;
+    text-decoration: none;
+    background-color: #00218C;
+    color: #ECEEFF;
+    font-size: 1rem;
 }
 .content {
     display: flex;
@@ -153,4 +201,12 @@ footer {
     background-color: #407BFF;
     color: #ECEEFF;
     flex-direction: column;
+}
+@media only screen and (max-width: 900px) {
+    .hamburger {
+        display: block;
+    }
+    .header .nav-bar {
+        display: none;
+    }
 }
