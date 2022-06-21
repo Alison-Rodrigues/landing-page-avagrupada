@@ -15,11 +15,13 @@ body {
     display: flex;
     padding: 10px;
     align-items: center;
+    justify-content: space-between;
     position: fixed;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     background-color: #ECEEFF10;
     box-shadow: 5px 0 20px rgba(0, 0, 0, 0.2);
+    z-index: 10;
 }
 .header img {
     width: 50px;
@@ -34,7 +36,7 @@ body {
 }
 
 .content .image img {
-    width: 700px;
+    width: clamp(500px, 80%, 700px);
 }
 .content .image {
     background-color: #ECEEFF;
@@ -53,7 +55,7 @@ body {
     justify-content: center;
     align-items: center;
     color: #ECEEFF;
-    font-size: 4rem;  
+    font-size: clamp(2rem, 4vw, 6rem);  
     padding: 20px;
 }
 .text-container {
@@ -68,14 +70,15 @@ body {
     width: 50%;
 }
 .text-container .text h1 {
-    font-size: 5rem;
+    font-size: clamp(2rem, 5vw, 5rem);
     color: #407BFF;
     margin-bottom: 15px;
     position: relative;
+    
 }
 .text-container .text p {
     color: rgba(0, 0, 0, 0.7);
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 1.5vw, 2rem);
 }
 .text-container .text h1 span::before {
     content: "";
@@ -86,4 +89,49 @@ body {
     top: 0;
     left: 0;
     border-radius: 32px;
+    
+}
+.comparation-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ECEEFF;
+}
+.comparation-container .image-comparation {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.comparation-container .image-comparation img {
+    width: clamp(400px, 60%, 700px);
+}
+.comparation-container .text {
+    width: 40%;
+    height: 100%;
+    background-color: #407BFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.comparation-container .text h1 {
+    color: #ECEEFF;
+    font-size: clamp(2rem, 6vw, 6rem);
+}
+#scroll-text3 {
+    height: 120vh;
+}
+footer {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #407BFF;
+    color: #ECEEFF;
+    flex-direction: column;
 }
